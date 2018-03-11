@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />    
+    <title>canvas尺寸</title>
+    <style></style>
+    
+    <script >
+        window.onload=function(){
+            var canvas=document.getElementById('canvas');//获得元素节点
+            var ctx=canvas.getContext('2d');//获得图形上下文
+ 
+            ctx.strokeStyle="blue";
+            ctx.lineWidth=5;
+
+            ctx.moveTo(50,5);
+            ctx.lineTo(150,5);
+            ctx.lineTo(150,100);
+            //ctx.closePath();
+            ctx.stroke();
+            
+            ctx.beginPath(); 
+            //beginPath()以后绘制的路径样式不会影响到上边的路径；
+            //否则下面样式改变，上面绘制的路径样式也会改变
+            ctx.strokeStyle="red";
+            ctx.lineWidth=10;           
+            ctx.moveTo(50,150);
+            ctx.lineTo(150,150);
+            ctx.lineTo(150,250);
+            ctx.closePath();
+            ctx.stroke();
+           
+            
+        
+            
+
+            
+        }
+    </script>
+</head>
+<body>    
+    <canvas height="300" width="600" id="canvas" style="border:1px gray solid">
+            Your browser does not support the HTML 5 Canvas.
+    </canvas>  
+</body>
+</html>

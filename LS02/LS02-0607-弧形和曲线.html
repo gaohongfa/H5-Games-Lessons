@@ -16,27 +16,24 @@
             context.lineWidth=10;
             context.strokeStyle='red';
 
-            //  context.arc(100, 100, 50, Math.PI*1, Math.PI*1.5);
-            //  context.stroke();
-            //  context.beginPath();             
-            //  context.arc(100, 100, 50, Math.PI*0.5 ,0 ,true);
-            //  context.stroke();   
-
-            context.moveTo(4, 5);            
-            context.quadraticCurveTo(20, 50,70,80); //二次曲线
-
-            context.moveTo(20, 30);
-            context.bezierCurveTo(0,110,300,210,150,310);
+             context.arc(100, 100, 50, Math.PI*1, Math.PI*1.5);
+             context.stroke();
+             context.beginPath();             
+             context.arc(100, 100, 50, Math.PI*0.5 ,0 ,true);//圆弧
+             context.stroke();   
             
-            
-
+            context.beginPath();            
+            context.strokeStyle='yellow';
+            context.moveTo(40, 50);            
+            context.quadraticCurveTo(120, 100,170,180); //二次曲线
             context.stroke();
-            
-            
-                
-            
-            
-        
+
+            context.beginPath();            
+            context.strokeStyle='green';
+            context.moveTo(20, 30);
+            context.bezierCurveTo(0,110,300,210,150,310);//贝塞尔曲线
+            context.stroke();
+     
         }
     </script>
 </head>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />    
+    <title>canvas尺寸</title>
+    <style></style>
+    
+    <script >
+        window.onload=function(){
+            var canvas=document.getElementById('canvas');//获得元素节点
+            var ctx=canvas.getContext('2d');//获得图形上下文 
+            
+            //save()和restore()只影响样式，并不影响路径的绘制
+            ctx.fillStyle='red';
+            ctx.fillRect(0,0,100,100);
+            ctx.save();
+            ctx.fillStyle='green';
+            //ctx.restore()
+            ctx.fillRect(100,100,100,100);
+            ctx.save();
+            ctx.fillStyle='yellow';
+            //ctx.restore();
+            //ctx.restore();
+            ctx.fillRect(200,200,100,100); 
+            
+        }
+    </script>
+</head>
+<body>    
+    <canvas height="300" width="600" id="canvas" style="border:1px gray solid">
+            Your browser does not support the HTML 5 Canvas.
+    </canvas>  
+</body>
+</html>
